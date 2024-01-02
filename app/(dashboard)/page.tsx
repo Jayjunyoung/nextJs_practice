@@ -74,7 +74,7 @@ function StatsCards(props: StatsCardProps) {
         title="Total submissions"
         icon={<FaWpforms className="text-yellow-600" />}
         helperText="All time form submissions"
-        value={data?.submissions.toLocaleString() + "%" || ""}
+        value={data?.submissions.toLocaleString() + ""}
         loading={loading}
         className="shadow-md shadow-yellow-600"
       />
