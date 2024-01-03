@@ -83,7 +83,7 @@ function StatsCards(props: StatsCardProps) {
         title="Submission rate"
         icon={<HiCursorClick className="text-green-600" />}
         helperText="Visits that result in form submission"
-        value={data?.submissionRate.toLocaleString() || ""}
+        value={data?.submissionRate.toLocaleString() + "%" || ""}
         loading={loading}
         className="shadow-md shadow-green-600"
       />
