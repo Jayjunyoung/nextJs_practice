@@ -25,9 +25,17 @@ export type ElementsType =
 
 export type SubmitFunction = (key: string, value: string) => void;
 
+export type FormElementInstance = {
+  //폼 엘리먼트에 대한 타입을 지정한다.
+  id: string;
+  type: ElementsType;
+  extraAttributes?: Record<string, any>;
+};
+
 export type FormElement = {
   type: ElementsType;
 
+  //FormElementInstance의 객체를 반환하는 함수이다.
   construct: (id: string) => FormElementInstance;
 
   designerBtnElement: {
@@ -51,15 +59,10 @@ export type FormElement = {
   validate: (formElement: FormElementInstance, currentValue: string) => boolean;
 };
 
-export type FormElementInstance = {
-  id: string;
-  type: ElementsType;
-  extraAttributes?: Record<string, any>;
-};
-
 type FormElementsType = {
   [key in ElementsType]: FormElement;
 };
+
 export const FormElements: FormElementsType = {
   TextField: TextFieldFormElement,
   TitleField: TitleFieldFormElement,

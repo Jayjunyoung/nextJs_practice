@@ -9,6 +9,7 @@ import {
 } from "react";
 import { FormElementInstance } from "../FormElements";
 
+//요소의 추가 삭제 기능을 여기다가 구현
 type DesignerContextType = {
   elements: FormElementInstance[];
   setElements: Dispatch<SetStateAction<FormElementInstance[]>>;
